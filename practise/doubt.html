@@ -1,0 +1,34 @@
+var isbn=book.isbn;
+var isbn1={"isbn":isbn};
+
+var config = {
+                headers : {
+                    'content-type': 'application/x-www-form-urlencoded'
+                }
+            }
+					
+Code snippet-1
+$http.delete('http://172.27.12.104:3000/book/remove',$.param(isbn1),config)
+			.then(
+					function(response){
+					// success callback
+						alert('book deleted');
+					}, 
+					function(response){
+					// failure callback
+						alert('book deletion failed');
+				     }
+				 );
+Code snippet-2
+$http({  
+            url:"http://172.27.12.104:3000/book/remove",  
+            method:'DELETE',  
+            data: $.param(isbn1),
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+         }).success(function (response) {  
+            $scope.value = response; 
+              alert($scope.value);
+         })  
+           .error(function (error) {  
+              alert(error);  
+           });

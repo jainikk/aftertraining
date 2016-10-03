@@ -1,0 +1,31 @@
+<html>
+<body>
+<script>
+a=new Array();
+a[0]=2;
+a[1]=a;
+a[2]="hi";
+console.log(a);
+
+/*b=new Array(1,2,3);
+for(i in b){
+
+	console.log(i);
+	//console.log(b[i]);
+	alert("b[i]="+b[i]);
+}*/
+
+c=new Array();
+d=new Array();
+c[1]=3;
+d[2]=5;
+d=c;
+console.log(c);
+console.log(d);
+console.log(c[0]+"\n"+c[1]+"\n"+c[2]+"\n"+c[3]+"\n"+c[4]+"\n"+c[5]+"\n");
+console.log(d[0]+"\n"+d[1]+"\n"+d[2]+"\n"+d[3]+"\n"+d[4]+"\n"+d[5]+"\n");
+console.log(NaN===NaN);
+console.log(9>9===true);
+</script>
+</body>
+</html>

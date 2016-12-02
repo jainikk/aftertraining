@@ -1,0 +1,58 @@
+Can you guys speak to Shital Gosavi (6223) sitting on your floor?
+Below is the requirement she shared with me,
+---
+Hi Yogesh,
+Thanks for your suggestions. However in this project client has used CSS3’s keyframes for animation instead of jQuery animation so to keep consistency we need to use CSS3.
+We can create multiple CSS with all expected effects and then can call them sequentially using JQuery callback functions.
+We need to create CSS in similar way of below demo CSS
+
+Demo CSS:
+div
+{
+width:200px;
+height:200px;
+animation:demo 10s ease-in  infinite,
+         trans 10s ease-in-out infinite;
+-webkit-animation:demo 10s ease-in infinite, 
+  trans 10s ease-in-out infinite; /* Prefix for Safari and Chrome */
+border-radius:20px;
+}
+
+@keyframes demo
+{
+0% {background:#009900;}
+    50% {background:yellow; width:100px; height:100px;}
+100% {background:#CC66FF; width:300px; height:300px;}
+}
+@keyframes trans
+{
+0% {transform:translate(0px);}
+    50% {transform:translate(150px);}
+100% {transform:translate(300px);}
+}
+We need below animation effects in above CSS format
+CSS1
+o	Fade add a button graphic from 100% to 0% opacity
+o	Animation length 0:00:00:00 to 0:00:00:07 
+o	Behind the add a page button is a solid colored shape, #777777
+CSS2
+o	Solid shape grows in width
+o	As solid shape grows in width, fade in page design from 0% to 70% opacity
+o	Animation length 0:00:00:07 to 0:00:00:21 
+CSS3
+o	Fade in the rest of the page design from 70% to 100% opacity and fade in selection frame from 0% to 100%. Animation length 0:00:00:21 to 0:00:01:02 
+o	Fade in Page Selection and Page Numbers from 0:00:00:21 to 0:00:01:02 
+CSS4
+o	Animate in the add a page buttons
+o	Fade in the buttons as they animate in from 20% to 100%
+o	Animation length 0:00:01:02 to 0:00:01:10 
+CSS5:
+o	Animate original price moving down, then animate it bouncing up. During animation, have the opacity of the original price change from 100% to 0%.
+o	When the original price bounces up, animate the new price coming up until the baseline of the text matches the baseline of the product text. Then animate it bouncing down to the starting position of the original price. During animation, have the opacity change from 0% to 100% 
+o	Animation length 0:00:00:00 to 0:00:01:01 
+CSS6
+o	After new price animation, animate the addition number. Start the animation position from below the price text baseline. Quick fade in from 0% to 100%. Animation length 0:00:00:00 to 0:00:00:03
+o	After the addition number fades in, animate the position up and animate opacity from 100% to 0%. Animation length 0:00:00:00 to 0:00:00:08
+
+Once these CSS are ready we can call them sequentially using jQuery callbacks.
+It would be great if you suggest someone who can help us to write above CSS’s .
